@@ -1,0 +1,367 @@
+/*	CSS-Reset to reduce browser inconsistencies
+	http://meyerweb.com/eric/tools/css/reset/ 
+	v2.0 | 20110126
+	License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*
+  ========================================
+  Box-Model
+  ========================================
+*/
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* 
+	====================
+	My styling 
+	====================
+*/
+
+.container {					
+	margin: 0 1.5%;			
+	width: 97%;				
+}
+.grid{
+	margin-left: -1.5%;
+	margin-right: -1.5%;
+	width: 101.5%;		/*This is also necessary to avoid that the floating of the text after the columns.*/
+}						/*The width must be min: 100%, because of the reducing margin the grid only has the same extention like the article, if we declare the width to 101.5% */
+.container {
+	padding-left: 1.5%;
+	padding-right: 1.5%;
+}
+
+/* Clearfix*/
+.groupclearfloat:before,			/*preventing that the float will cause troubles*/
+.groupclearfloat:after {
+  content: "";
+  display: table;
+}
+.groupclearfloat:after {
+  clear: both;
+}
+.groupclearfloat {
+  clear: both;
+  *zoom: 1;
+}
+.img  {
+	width: 100%;
+}
+
+/*background image with opacity*/
+.bgcontainer{
+	background-color: rgba(255, 255, 255, 0.8);
+	min-width: 97%;
+	padding: 1.5% 1.5%;
+}
+.bgcontainernomargin{
+	margin: 0 -1.6%;
+}
+.bgimage {
+	background: #fff;
+	background-image: url("bg_night.jpg");
+	background-repeat: repeat-y;
+	background-size: 100% auto;
+	margin-bottom: 22px;
+}
+
+/*Typography*/
+body {
+	font-size: 14px;
+	font-family: 'Roboto Condensed', sans-serif;
+	line-height: 1.5em;			/*the line height is 1 1/2 times the font-size*/
+	}
+em { 
+	font-weight: bold;
+	margin-bottom: 6px;
+	}
+.bgtextcolor{
+	color: #000;
+}
+/*.shadow {
+	text-shadow: 4px 3px 8px rgba(200, 80, 80, .6);
+}*/
+h1, h2, h3 {
+	margin-bottom: 22px;
+}
+h1 {
+	font-size: 18px;
+	font-weight: bold;
+	line-height: 1.5em;
+}
+h2 {
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 1.5em;
+}
+h3 {
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 1.5em;
+}
+p {
+	margin-bottom: 18px;
+}
+code{
+	color: #404040;
+	line-height: 150%;
+	border: 0.1pt solid #e0e0e0;
+	padding-left: 3px;
+	padding-right: 4px;
+	padding-bottom: 2px;
+	margin-right: 2px;
+	margin-left: 2px;
+}
+figcaption {
+	font-size: 12px;
+	line-height: 1.5em;
+	font-style: italic;
+	text-align: left;
+	margin-bottom: 10px;
+}
+.primaryheader{
+	margin-top: 22px;
+	margin-bottom: 22px;
+	/*border-bottom: 1pt solid #008080;*/
+	/*position: fixed;*/
+}
+ul.nav li { 
+	width: 100%;
+	border-bottom: 1pt solid #008080;
+	border-right: 1pt solid #008080;
+	padding-bottom: 5px;
+	margin-bottom: 22px;
+	margin-right: 22px;
+	}
+a {
+	text-decoration: none;
+	color: #008080; /*teal*/
+	}
+a:hover {
+	/*color: #eeaa99; /*orange*/
+	font-weight: bold;
+	}
+.list{
+	list-style-type: disc;
+	padding: 0 0 0 3.2%;
+	margin-bottom: 22px;
+}
+ul.list li{
+	padding-bottom: 15px;
+}
+.backtotop {
+	border-bottom: 1pt solid #a0a0a0;
+	margin-bottom: 22px;
+}
+.backtotopnoborder{
+	margin-bottom: 42px;
+}
+.license{
+	text-align: left;
+}
+.primaryfooter{
+	font-size: 12px;
+	line-height: 1.5em;
+	border-top: 1pt solid #a0a0a0;
+	color: #a0a0a0; /*gray*/
+	text-align: right;
+	padding-top: 22px;
+}
+.articlefooter{					/*just used for styling the time*/
+	font-style: italic;
+	text-align: right;
+}
+/*
+	=================
+	map styling
+	=================
+*/
+#garten {
+	width: 100%;
+	height: 512px;
+	margin: 0 0.3% 5px 0.3%;
+}
+#mapcap {
+	font-size: 12px;
+	line-height: 1.5em;
+	font-style: italic;
+	text-align: center;
+	margin: 0 auto 22px auto;
+}
+
+
+/*
+	=================
+	responsive design
+	=================
+*/
+@media all and (min-width: 1024px){
+/*general body styling */
+	body{
+		margin: 0 10%;
+	}
+	/* 2 Column design */
+	section {
+		float: left;
+		width: 59%;
+	}
+	aside {
+		float: right;
+		margin: 0 0 22px 1.5%;
+		width: 35%;
+	}
+/* 3 column design */
+	.col-left-padding{		
+		padding-left: -3%;	/*to reduce the padding on the left side*/
+	}
+	.col-right-padding{		
+		padding-right: -3%;	/*to reduce the padding on the right side*/
+	}
+	.col-1-3 {
+		width: 33.33%;
+		vertical-align: top;		/*ensure that the content is displayed on the top of the column*/
+		padding-right: 1.5%;
+		padding-left: 1.5%;
+		display: inline-block;
+	}
+	#mobilemenu{
+		display:none
+	}
+	ul.nav li {
+		display: inline-block; 
+		width: 120px;
+	}
+
+}
+@media all and (min-width: 769px) and (max-width: 1023px){
+/* 2 Column design */
+	section {
+		float: left;
+		width: 59%;
+	}
+	aside {
+		float: right;
+		margin: 0 0 22px 1.5%;
+		width: 35%;
+	}
+/* 3 column design */
+	.col-left-padding{		
+		padding-left: -3%;	/*to reduce the padding on the left side*/
+	}
+	.col-right-padding{		
+		padding-right: -3%;	/*to reduce the padding on the right side*/
+	}
+	.col-1-3 {
+		width: 33.33%;
+		vertical-align: top;		/*ensure that the content is displayed on the top of the column*/
+		padding-right: 1.5%;
+		padding-left: 1.5%;
+		display: inline-block;
+	}
+	#mobilemenu{
+		display:none
+	}
+	ul.nav li {
+		display: inline-block; 
+		width: 100px;
+	}
+}
+@media all and (max-width: 768px) {
+  section, aside {
+    float: none;
+    width: auto;
+  }
+  .col-1-3 {
+	display: block;
+	padding-bottom: 10px;
+	padding-left: 1.5%;
+  }
+  .mobilemenu {
+	  display: block;
+	  background-color: #808082;
+	  margin: -4% -4% 0 -4%;
+  }
+  .mobilemenu a {
+	  color: #e0e0e0;
+	  padding: 0% 4%;
+	  text-align: center;
+	  font-size: 14pt;
+	  line-height: 38pt;
+  }
+  .mobilemenu ul li {
+	display: none;
+	width: 100%;
+  }
+  .mobilemenu:hover ul li {
+	 display: block;
+	 text-align: center;
+	 border: none;
+  }
+   .mobilemenu ul li:hover {
+	 background-color: #505052;
+  }
+  .primaryfooter{
+	  text-align: left;
+  }
+  h2 {
+	  padding-top: 18px;
+  }
+  .backtotop {
+	border-bottom: 1pt solid #a0a0a0;
+	margin-bottom: 22px;
+}
+.backtotopnoborder{
+	margin-bottom: 22px;
+}
+}
